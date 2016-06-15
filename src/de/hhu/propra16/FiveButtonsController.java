@@ -15,13 +15,11 @@ public class FiveButtonsController {
 
     @FXML private Label fileLabel;
 
-    @FXML private AnchorPane ap;
-
     @FXML
     public void handleFileButton(ActionEvent actionEvent) {
         FileChooser fc = new FileChooser();
-        fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("txt"));
-        File f = fc.showOpenDialog(ap.getScene().getWindow());
+        fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Textfiles", "*.txt"));
+        File f = fc.showOpenDialog(fileLabel.getScene().getWindow());
 
         fileLabel.setText(f.getName());
     }
