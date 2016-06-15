@@ -4,6 +4,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.Button?>
 <GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:id="mainPane"
           fx:controller="de.hhu.propra16.FiveButtonsController"
           alignment="CENTER"
           hgap="10"
@@ -11,5 +12,6 @@
     <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
 
     <Text text="Five Buttons" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Button text="Hintergrund blau" fx:id="background" onAction="#changeBackground" />
 
 </GridPane>
