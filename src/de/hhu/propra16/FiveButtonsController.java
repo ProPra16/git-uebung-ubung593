@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -13,15 +14,19 @@ import java.io.File;
  */
 public class FiveButtonsController {
 
+    @FXML private GridPane pane;
+
     @FXML private Label fileLabel;
 
     @FXML
     public void handleFileButton(ActionEvent actionEvent) {
         FileChooser fc = new FileChooser();
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Textfiles", "*.txt"));
-        File f = fc.showOpenDialog(fileLabel.getScene().getWindow());
+        File f = fc.showOpenDialog(pane.getScene().getWindow());
 
-        fileLabel.setText(f.getName());
+        if(f != null) {
+            fileLabel.setText(f.getName());
+        }
     }
 
 }
