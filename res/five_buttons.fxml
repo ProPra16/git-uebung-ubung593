@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <GridPane xmlns:fx="http://javafx.com/fxml"
           fx:controller="de.hhu.propra16.FiveButtonsController"
           alignment="CENTER"
@@ -12,6 +13,8 @@
 
     <Text text="Five Buttons" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
 
-    <Button text="Open File" onAction="#handleFileButton">
+    <Button text="Open File" GridPane.columnIndex="1" GridPane.rowIndex="0" onAction="#handleFileButton" />
+
+    <Label id="fileLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
 </GridPane>
